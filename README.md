@@ -1,70 +1,217 @@
-# Getting Started with Create React App
+<p align="center">
+  <img src="https://camo.githubusercontent.com/a4e71a0942263821f4cb9213b2808af909e46967d9ed3ccee6e7e122f276efd6/68747470733a2f2f696d672e69636f6e73382e636f6d2f65787465726e616c2d74616c2d72657669766f2d726567756c61722d74616c2d72657669766f2f39362f65787465726e616c2d726561646d652d69732d612d656173792d746f2d6275696c642d612d646576656c6f7065722d6875622d746861742d6164617074732d746f2d7468652d757365722d6c6f676f2d726567756c61722d74616c2d72657669766f2e706e67" width="100" />
+</p>
+<p align="center">
+    <h1 align="center">React Exercício 01</h1>
+</p>
+<p align="center">
+    <em>Exercício para a disciplina de Programação Web com Node.js do curso de Desenvolvimento Web Front-End - PUC Minas</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/github/license/camilarozendo/react-ex01?style=default&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/camilarozendo/react-ex01?style=default&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/camilarozendo/react-ex01?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/camilarozendo/react-ex01?style=default&color=0080ff" alt="repo-language-count">
+<p>
+<p align="center">
+	<!-- default option, no dependency badges. -->
+</p>
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🔗 Quick Links
 
-## Available Scripts
+> - [ Overview](#-overview)
+> - [ Features](#-features)
+> - [ Repository Structure](#-repository-structure)
+> - [ Getting Started](#-getting-started)
+>   - [ Installation](#-installation)
+>   - [ Running react-ex01](#-running-react-ex01)
+>   - [ Tests](#-tests)
+> - [ Contributing](#-contributing)
+> - [ License](#-license)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📍 Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O projeto consiste em uma aplicação web com uma estrutura básica de layout, incluindo uma barra de navegação (Navbar), um menu lateral (Sidebar), um menu de seções (Menu) e uma seção de conteúdo (ContainerSections). Cada seção do menu leva a diferentes partes da aplicação, enquanto o conteúdo da seção é exibido na área central.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🔮 Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Navbar:
 
-### `npm run build`
+- Exibe um menu de navegação na parte superior da página.
+- O menu é dinamicamente renderizado com base nos itens passados como propriedade (props).
+- Cada item do menu contém um nome e um link.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Menu:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Apresenta um menu de seções na lateral da página.
+- Semelhante à Navbar, os itens do menu são renderizados com base nas props passadas.
+- Cada seção do menu tem um nome e um link.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### ContainerSections:
 
-### `npm run eject`
+- Mostra uma série de seções de conteúdo no corpo principal da página.
+- Cada seção contém um título e um texto, que são renderizados usando o componente Img.
+- Usa o componente Img para renderizar as seções de conteúdo.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+#### Sidebar:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Apresenta um menu lateral na página.
+- Semelhante à Navbar e ao Menu, os itens do menu são renderizados com base nas props passadas.
+- Cada item do menu lateral possui um nome e um link.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Img:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Componente para exibir imagens com um título e um texto associado.
+- Utilizado pelo ContainerSections para renderizar cada seção de conteúdo.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🧩 Repository Structure
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
 
-### Code Splitting
+└── react-ex01/
+   ├── package-lock.json
+   ├── package.json
+   ├── public/
+   │   ├── index.html
+   │   ├── logo.png
+   │   └── manifest.json
+   └── src/
+       ├── components
+       │   ├── Header.js
+       │   ├── Img.js
+       │   ├── Menu.js
+       │   ├── Sections.js
+       │   └── Sidebar.js
+       ├── App.css
+       ├── App.js
+       ├── App.test.js
+       ├── index.css
+       ├── index.js
+       ├── logo.svg
+       ├── reportWebVitals.js
+       └── setupTests.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🚀 Getting Started
 
-### Making a Progressive Web App
+***Requirements***
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Ensure you have the following dependencies installed on your system:
 
-### Advanced Configuration
+* Node.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### ⚙️ Installation
 
-### Deployment
+1. Clone the pucminas.exercicio2.node repository:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```sh
+git clone https://github.com/camilarozendo/react-ex01
+```
 
-### `npm run build` fails to minify
+2. Change to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```sh
+cd react-ex01
+```
+
+3. Install the dependencies:
+
+```sh
+npm install
+```
+
+### 👩‍💻 Running react-ex01
+
+Use the following command to run react-ex01:
+
+```sh
+npm start
+```
+
+---
+
+###  🧪 Tests
+
+To execute tests, run:
+
+```sh
+npm test
+```
+
+---
+
+
+## 🤝 Contributing
+
+Contributions are welcome! Here are several ways you can contribute:
+
+- **[Submit Pull Requests](https://github/camilarozendo/react-ex01/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://github/camilarozendo/react-ex01/discussions)**: Share your insights, provide feedback, or ask questions.
+- **[Report Issues](https://github/camilarozendo/react-ex01/issues)**: Submit bugs found or log feature requests for Pucminas.exercicio2.node.
+
+<details closed>
+    <summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your GitHub account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a Git client.
+   ```sh
+   git clone https://github.com/camilarozendo/react-ex01
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to GitHub**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+
+Once your PR is reviewed and approved, it will be merged into the main branch.
+
+</details>
+
+---
+
+## 📄 License
+
+MIT License
+
+Copyright (c) [2023] [Camila Rozendo]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+[**Return**](#-quick-links)
+
+---
