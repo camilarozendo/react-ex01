@@ -5,7 +5,7 @@
     <h1 align="center">React Exercício 01</h1>
 </p>
 <p align="center">
-    <em>Exercício para a disciplina de Programação Web com Node.js do curso de Desenvolvimento Web Front-End - PUC Minas</em>
+    <em>Exercício para a disciplina de Frameworks de FrontEnd - React do curso de Desenvolvimento Web Front-End - PUC Minas</em>
 </p>
 <p align="center">
 	<img src="https://img.shields.io/github/license/camilarozendo/react-ex01?style=default&color=0080ff" alt="license">
